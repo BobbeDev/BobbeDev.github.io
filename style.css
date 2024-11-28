@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'WalHol';
+    src: url(/walibi-holland.ttf);
+}
+
+body{
+    margin: 0%;
+    background-color: rgb(221, 68, 68)
+}
+
+p{
+    margin: 15px;
+    color: white;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(153, 34, 34);
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    font-size: 3em;
+    font-family: 'WalHol';
+    text-align: center;
+    display: block;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: rgb(122, 9, 9);
+}
+.navbar li{
+    float: unset;
+    display: inline;
+}
+.navbar{
+    text-align: center;
+}
+
+@keyframes Shake {
+    from{
+         
+    }
+}
