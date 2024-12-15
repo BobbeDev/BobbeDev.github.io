@@ -10,24 +10,59 @@
 body{
     margin: 0%;
     background-color: rgb(221, 68, 68);
-    background-image: url("assets/Background.png");
+    background-image: url(assets/Background.png);
     background-repeat: repeat;
+    animation: changeBg 3s infinite;
+    background-size: 300px;
+    image-rendering: crisp-edges;
+}
+
+main{
+    margin: 15px;
 }
 
 p{
-    margin: 15px;
     color: white;
     font-family: 'BadCom';
     font-size: 30px;
+    animation: LetterShake 3s infinite;
+    animation-timing-function: ease-out;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-family: 'BadCom';
+    font-size: 60px;
+    animation: LetterShake 3s infinite;
+    animation-timing-function: ease-out;
+    text-align: center;
+}
+
+.NoMargin {
+    margin: 0%;
+}
+
+iframe {
+    display: left;
+    margin-left: 200px; 
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .shadow {
     filter: drop-shadow(0px 0px 10px #000000);
 }
 
+.center {
+    text-align: center;
+}
+
+
 .navbar ul{
     list-style-type: none;
-    background-color: rgb(153, 34, 34);
+    background-color: rgb(124, 27, 27);
     padding: 0%;
     margin: 0%;
     overflow: hidden;
@@ -59,22 +94,14 @@ p{
     text-align: center;
 }
 
-
-
-.scrolling-image-container {
-    overflow: hidden;
+@keyframes changeBg{
+    0%, 100%  {background-image: url("assets/Background1.png");}
+    33% {background-image: url("assets/Background2.png");}
+    66% {background-image: url("assets/Background3.png");}
 }
-.scrolling-image {
-    background: url("assets/Background.png") repeat-x;
-    height: 100px;
-    width: 300px;
-    animation: slide 3s linear infinite;
-}
-@keyframes slide {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(-100px); /* The image width */
-    }
+
+@keyframes LetterShake{
+    0%, 100%  {letter-spacing: normal;}
+    33% {letter-spacing: 0.2px;}
+    66% {letter-spacing: 0.1px;}
 }
