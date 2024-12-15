@@ -1,16 +1,28 @@
 @font-face {
     font-family: 'WalHol';
-    src: url(/walibi-holland.ttf);
+    src: url(fonts/walibi-holland.ttf);
+}
+@font-face {
+    font-family: 'BadCom';
+    src: url(fonts/BadComic-Italic.ttf);
 }
 
 body{
     margin: 0%;
-    background-color: rgb(221, 68, 68)
+    background-color: rgb(221, 68, 68);
+    background-image: url("assets/Background.png");
+    background-repeat: repeat;
 }
 
 p{
     margin: 15px;
     color: white;
+    font-family: 'BadCom';
+    font-size: 30px;
+}
+
+.shadow {
+    filter: drop-shadow(0px 0px 10px #000000);
 }
 
 .navbar ul{
@@ -30,10 +42,14 @@ p{
     text-decoration: none;
     padding: 15px;
     text-align: center;
+    letter-spacing: normal;
+    transition: all 0.25s;
 }
 
 .navbar a:hover{
     background-color: rgb(122, 9, 9);
+    letter-spacing: 0.1em;
+    transition: all 0.25s;
 }
 .navbar li{
     float: unset;
@@ -43,8 +59,22 @@ p{
     text-align: center;
 }
 
-@keyframes Shake {
-    from{
-         
+
+
+.scrolling-image-container {
+    overflow: hidden;
+}
+.scrolling-image {
+    background: url("assets/Background.png") repeat-x;
+    height: 100px;
+    width: 300px;
+    animation: slide 3s linear infinite;
+}
+@keyframes slide {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-100px); /* The image width */
     }
 }
