@@ -15,6 +15,8 @@ body{
     animation: changeBg 3s infinite;
     background-size: 300px;
     image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    animation-timing-function: step-end;
 }
 
 main{
@@ -37,6 +39,18 @@ h1{
     animation: LetterShake 3s infinite;
     animation-timing-function: ease-out;
     text-align: center;
+}
+
+h2{
+    color: white;
+    font-family: 'BadCom';
+    font-size: 40px;
+    animation: LetterShake 3s infinite;
+    animation-timing-function: ease-out;
+}
+
+.ProjectButton {
+    width: 600px;
 }
 
 .NoMargin {
