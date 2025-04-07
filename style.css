@@ -6,17 +6,21 @@
     font-family: 'BadCom';
     src: url(fonts/BadComic-Italic.ttf);
 }
+@font-face {
+    font-family: 'HeyComic';
+    src: url(fonts/Hey\ Comic.ttf);
+}
 
 body{
     margin: 0%;
-    background-color: rgb(221, 68, 68);
-    background-image: url(assets/Background.png);
+    background-color: rgb(124, 27, 27);
+    background-image: url(assets/BgAnim.gif);
     background-repeat: repeat;
-    animation: changeBg 3s infinite;
+    /* animation: changeBg 5s infinite; */
     background-size: 300px;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
-    animation-timing-function: step-end;
+    /* animation-timing-function: step-end; */
 }
 
 main{
@@ -27,8 +31,6 @@ p{
     color: white;
     font-family: 'BadCom';
     font-size: 30px;
-    animation: LetterShake 3s infinite;
-    animation-timing-function: ease-out;
     text-align: center;
 }
 
@@ -36,8 +38,6 @@ h1{
     color: white;
     font-family: 'BadCom';
     font-size: 60px;
-    animation: LetterShake 3s infinite;
-    animation-timing-function: ease-out;
     text-align: center;
 }
 
@@ -45,8 +45,6 @@ h2{
     color: white;
     font-family: 'BadCom';
     font-size: 40px;
-    animation: LetterShake 3s infinite;
-    animation-timing-function: ease-out;
 }
 
 .ProjectButton {
@@ -58,12 +56,37 @@ h2{
 }
 
 iframe {
-    display: left;
-    margin-left: 200px; 
-    border-radius: 25px;
+    /* margin-left: 200px;  */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
     overflow: hidden;
     z-index: 1;
 }
+
+
+/* for the big boy video on the main page */
+
+#big-video-container {
+    position: relative;
+}
+
+#big-video {
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 10px #000000);
+    position: relative;
+}
+
+#cooltext {
+    text-align: center;
+    bottom: 0px;
+    position: absolute;
+    margin: 0%;
+}
+
+
 
 .shadow {
     filter: drop-shadow(0px 0px 10px #000000);
@@ -71,6 +94,12 @@ iframe {
 
 .center {
     text-align: center;
+}
+
+.TextBox{
+    max-width: 750px;
+    margin: auto;
+    background: rgb(216, 70, 70);
 }
 
 
@@ -108,14 +137,15 @@ iframe {
     text-align: center;
 }
 
-@keyframes changeBg{
-    0%, 100%  {background-image: url("assets/Background1.png");}
-    33% {background-image: url("assets/Background2.png");}
-    66% {background-image: url("assets/Background3.png");}
-}
+
+/* @keyframes changeBg{
+    0%, 100%  {background-image: url("assets/BackgroundWaveRed1.png");}
+    25% {background-image: url("assets/BackgroundWaveRed2.png");}
+    50% {background-image: url("assets/BackgroundWaveRed3.png");}
+    75% {background-image: url("assets/BackgroundWaveRed4.png");}
+} */
 
 @keyframes LetterShake{
-    0%, 100%  {letter-spacing: normal;}
-    33% {letter-spacing: 0.2px;}
-    66% {letter-spacing: 0.1px;}
+    0%, 100%  {font-family: 'BadCom'; letter-spacing: 0.95px;}
+    50% {font-family: 'HeyComic'; font-size: 28.5px; letter-spacing: 2.5px;}
 }
